@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1c2d39;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  height: 80px;
+  background-color: #051120;
+  padding: 5px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  height: 55px;
+}
+
+header input,
+button {
+  padding: 6px 10px;
+  margin-right: 5px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  border-radius: 10px;
+  color: #fff;
+}
+header input:focus {
+  outline: none;
+  box-shadow: 0px 0px 10px #fff;
+}
+header button:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 10px #fff;
+}
+
+.container-general {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.container-general .card {
+  height: 370px;
+  width: calc(100% / 3 - 100px);
+  background-color: #0b202f;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-general .card .card-image {
+  height: 60%;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.container-general .card .card-image img {
+  height: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.container-general .card .card-text {
+  width: 100%;
+  text-align: center;
+}
+
+.container-general .card .card-text h2 {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
