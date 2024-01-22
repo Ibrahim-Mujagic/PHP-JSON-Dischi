@@ -19,13 +19,22 @@
     </div>
   </header>
   <div class="container-general">
-    <div v-for="(record,index) in records" :key="index" class="card">
+    <div v-for="(record,index) in records" @click="showDetail(index)" :key="index" class="card">
       <div class="card-image">
         <img :src="record.poster" alt="">
       </div>
       <div class="card-text">
         <h2>{{record.title}}</h2>
         <p>{{record.author}}</p>
+      </div>
+    </div>
+    <div v-if="isShowModal" class="modal">
+      <div class="card-modal">
+
+        <img :src="detailRecord.poster" :alt="detailRecord.title">
+        <h2>{{detailRecord.title}}</h2>
+        <p>{{detailRecord.author}}</p>
+        <button @click="isShowModal = false">X</button>
       </div>
     </div>
   </div>
